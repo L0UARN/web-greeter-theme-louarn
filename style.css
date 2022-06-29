@@ -59,6 +59,33 @@ form > label > input:focus {
     box-shadow: inset 0 -4px #ffc000;
 }
 
+@keyframes error {
+    0% {
+        background: #ffc000;
+        color: #202020;
+    }
+
+    25% {
+        background: #ff2000;
+        color: #efefef;
+    }
+
+    50% {
+        background: #ffc000;
+        color: #202020;
+    }
+
+    75% {
+        background: #ff2000;
+        color: #efefef;
+    }
+
+    100% {
+        background: #ffc000;
+        color: #202020;
+    }
+}
+
 form > button {
     position: relative;
 
@@ -70,6 +97,8 @@ form > button {
     border: none;
     border-radius: 6px;
     padding: 0.5rem;
+
+    animation: error 500ms linear;
 }
 
 form > button:after {
