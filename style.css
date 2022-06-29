@@ -1,11 +1,14 @@
 html {
     font-family: 'Roboto', sans-serif;
+    color: #efefef;
     font-size: 18px;
 }
 
 body {
     margin: 0;
     padding: 0;
+
+    background: #202020;
 }
 
 form {
@@ -17,5 +20,76 @@ form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+
+    background: #303030;
+    padding: 1rem 1rem;
+    border-radius: 6px;
+}
+
+form > label {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    margin: 0 0 1rem 0;
+}
+
+form > label:last-of-type {
+    margin-bottom: 2rem;
+}
+
+form > label > input {
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    font-size: 18px;
+
+    margin-top: 0.5rem;
+
+    background: #202020;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem;
+
+    box-shadow: inset 0 -4px #efefef;
+}
+
+form > label > input:focus {
+    box-shadow: inset 0 -4px #ffc000;
+}
+
+form > button {
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    color: #202020;
+    font-size: 18px;
+
+    background: #ffc000;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+form > button:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 4px;
+
+    background: #efefef;
+    border-radius: 0 0 4px 4px;
+
+    transition: width 200ms;
+}
+
+form > button:hover:after {
+    left: 0;
+    right: auto;
+    width: 100%;
 }
